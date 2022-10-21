@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FarmaPlus</string>
+    <string name="greeting">Hello from FarmaPlus!</string>
 </resources>
