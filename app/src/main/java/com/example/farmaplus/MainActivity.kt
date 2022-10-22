@@ -14,19 +14,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        /*lifecycleScope.launch {
-            val call = RemoteConnection.service.getMedicines(1,1,1)
-            val result = call.body()
-            if(call.isSuccessful){
-                val medicines = result?.medicines ?: emptyList()
-                Log.d("Medicines", medicines.toString())
-            }else{
-                showError()
-            }
-
-        }*/
-
         initRecyclerView()
     }
 
