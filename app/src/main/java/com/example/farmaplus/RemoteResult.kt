@@ -7,7 +7,7 @@ data class Medicine(
     @SerializedName("nregistro") val registerNumber: String,
     @SerializedName("nombre") val name: String,
     //@SerializedName("pactivos") val activePrinciples: String,
-    @SerializedName("labTitular") val laboratory: String,
+    @SerializedName("labtitular") val laboratory: String,
     @SerializedName("cpresc") val prescribingConditions: String,
     @SerializedName("estado") val status: Status,
     @SerializedName("comerc") val comerzialized: Boolean,

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ImageView
+        android:id="@+id/ivMedicine"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvMedicine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ACICLOVIR NORMON 50 mg/g CREMA EFG"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivMedicine"/>
+
+    <TextView
+        android:id="@+id/tvMedicineLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Laboratorios Normon, S.A."
+        app:layout_constraintTop_toBottomOf="@+id/tvMedicine"
+        app:layout_constraintStart_toEndOf="@+id/ivMedicine"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
