@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/ivMedicine"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@drawable/_1012_materialas" />
+
+    <TextView
+        android:id="@+id/tvMedicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:text="ABACAVIR/LAMIVUDINA DR. REDDYS 600 MG/300 MG COMPRIMIDOS RECUBIERTOS CON PELICULA EFG" />
+
+    <TextView
+        android:id="@+id/tvMedicineLab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:text="Reddy Pharma Iberia S.A."/>
+
+    <TextView
+        android:id="@+id/tvCpresc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:text="Uso Hospitalario" />
+
+    <TextView
+        android:id="@+id/tvMedicineDosis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:text="600 mg/300 mg" />
+</LinearLayout>
