@@ -6,34 +6,33 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.farmaplus.databinding.ActivityMainBinding
 import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         initRecyclerView()
     }
 
-    fun initRecyclerView(){
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerMedicine)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        lifecycleScope.launch {
+    private fun initRecyclerView(){
+        binding.recyclerMedicine.layoutManager = LinearLayoutManager(this)
+        lifecycleScope.launch{
             val call = RemoteConnection.service.getMedicines(1,1,1)
             val result = call.body()
-            if(call.isSuccessful){
+            if(call.isSuccessful) {
                 val medicines = result?.medicines ?: emptyList()
-                recyclerView.adapter = MedicineAdapter(medicines)
-                //Log.d("Medicines", medicines.toString())
+                binding.recyclerMedicine.adapter = MedicineAdapter(medicines)
             }else{
                 showError()
             }
 
         }
     }
-
 
     private fun showError(){
         toast("Ha ocurrido un error.")
